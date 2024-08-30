@@ -1,0 +1,77 @@
+/* Bottom Section Styles */
+.bottomSection {
+  background-color: #f6f6f6; 
+  color: #333;
+  display: flex; /* Use grid layout */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Add some padding for better spacing */
+  
+}
+
+.image {
+  width: 100%;
+  max-width: 400px; 
+  margin-top: 20px;
+}
+
+.bottom-text {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.bottom-text h2 {
+  font-size: 28px; 
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.bottom-text p {
+  font-size: 18px; 
+  line-height: 1.6; 
+  margin-bottom: 30px;
+}
+
+.bsbtn {
+  padding: 12px 25px;
+  background-color: #00a7e1;
+  color: white;
+  border: none;
+  border-radius: 25px; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bsbtn:hover {
+  background-color: #008bb3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bottomSection {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    grid-template-rows: auto auto; /* Auto height rows */
+  }
+
+  .image {
+    order: -1; /* Display image first on small screens */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .bottom-text {
+    max-width: 100%; /* Ensure text takes full width of container */
+  }
+
+  .bottom-text h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .bottom-text p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+ 
+}

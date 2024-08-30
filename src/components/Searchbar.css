@@ -1,0 +1,251 @@
+/* Floating bar styling */
+.floating-bar {
+    width: calc(100% - 20px); /* Full width minus margins */
+    max-width: 1300px; /* Maximum width */
+    padding: 10px;
+    background: linear-gradient(135deg, #0091d1, #01abef); /* Gradient background */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items on small screens */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    border-radius: 15px; /* Increased border-radius for softer look */
+    font-family: "Roboto", sans-serif; /* Modern, clean font */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.floating-bar:hover {
+    background: linear-gradient(135deg, #21b7f3, #44aedf); /* Gradient background on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Body styling */
+
+
+/* Input field styling */
+.input-field {
+    border: none; /* No border */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 12px; /* Increased padding */
+    margin: 5px; /* Margin between fields */
+    margin-left: 40px;
+    flex: 1;
+    min-width: 120px;
+    background-color: #fffafa; /* Light background for input fields */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Font size */
+}
+.react-autosuggest__input{
+    border: none; /* No border */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 12px; /* Increased padding */
+    margin: 5px; /* Margin between fields */
+    margin-left: 40px;
+    flex: 1;
+    min-width: 7rem;
+    background-color: #fffafa; /* Light background for input fields */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Font size */
+}
+.react-autosuggest__input:focus{
+    border-color: #cccce1; /* Border color on focus */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Light shadow on focus */
+    outline: none; /* Remove default outline */
+}
+.react-autosuggest__input::placeholder{
+    padding-left: 0px;
+    color: #888; /* Placeholder text color */
+}
+
+.input-field:focus {
+    border-color: #cccce1; /* Border color on focus */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Light shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.input-field::placeholder {
+    padding-left: 0px;
+    color: #888; /* Placeholder text color */
+}
+
+/* Search button styling */
+.search-button {
+    background: #ffffff;
+    color: #01abef; /* Button text color */
+    border: 2px solid #01abef; /* Button border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 58px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.search-button:hover {
+    background: #01abef; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.search-button:active {
+    transform: scale(0.98); /* Scale down on click */
+}
+
+.input-field3 {
+   
+    
+    border: none; /* Light border for better visibility */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 12px; /* Increased padding for a better user experience */
+    margin: 5px; /* Adjust margin to make space between fields */
+    margin-left:40px;
+    flex: 1;
+    min-width: 150px;
+    background-color: #fffafa; /* Light background for input fields */
+    color: #333; /* Dark text color for better readability */
+    font-size: 16px; /* Consistent font size */
+   
+}
+
+.input-field3:focus {
+    border-color: #cccce1; /* Border color change on focus */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Light shadow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.input-field3::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.input-field3::placeholder {
+    padding-left: 0px;
+    color: #888; /* Slightly darker placeholder text */
+}
+.input-field4 {
+   
+    
+    border: none; /* Light border for better visibility */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 12px; /* Increased padding for a better user experience */
+    margin: 5px; /* Adjust margin to make space between fields */
+    margin-left:40px;
+    flex: 1;
+    min-width: 150px;
+    background-color: #fffafa; /* Light background for input fields */
+    color: #333; /* Dark text color for better readability */
+    font-size: 16px; /* Consistent font size */
+   
+}
+
+.input-field4:focus {
+    border-color: #cccce1; /* Border color change on focus */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Light shadow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.input-field4::placeholder {
+    padding-left: 0px;
+    color: #888; /* Slightly darker placeholder text */
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .floating-bar {
+        width: calc(100% - 20px); /* Adjust width for small screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the bar */
+        padding: 10px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .input-field {
+        margin: 5px 0; /* Adjust margins for vertical layout */
+        min-width: auto; /* Remove minimum width constraint */
+    }
+
+    .react-autosuggest__input{
+        margin: 5px 0; /* Adjust margins for vertical layout */
+        min-width: 70%; /* Remove minimum width constraint */
+        margin-left: 10%;
+    }
+
+    .search-button {
+        margin-top: 10px; /* Space above the button in vertical layout */
+        width: 100%; /* Full width button */
+    }
+}
+
+
+
+
+
+
+/* Container for input fields and icons */
+.input-container {
+    position: relative;
+    max-width: 500px;
+    flex: 1;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #fffafa;
+}
+
+.input-container:hover {
+    border-color: #cccce1; /* Border color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+/* Icon styling */
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fffafa; /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+/* Adjust input field to accommodate icon
+*/
+
+
+
+/* Add these styles to ensure proper layout for the autocomplete input */
+
+  
+.react-autosuggest__suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style for each suggestion item */
+.react-autosuggest__suggestion {
+    padding: 10px;
+    border-bottom: 2px solid #b7b6b6; /* Separator line */
+}
+
+/* Remove the border from the last item */
+.react-autosuggest__suggestion:last-child {
+    border-bottom: none;
+}
+
+/* Optional: Add hover effect */
+.react-autosuggest__suggestion:hover {
+    background-color: #eaeaea; /* Background color on hover */
+}
+
+  
+  .react-autosuggest__suggestions-container:hover {
+    border-color: #cccce1; /* Border color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+  }
+  
