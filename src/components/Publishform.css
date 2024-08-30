@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Publishform.css */
+.publish-form {
+  max-width: 300px; /* Smaller form width */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #edf1e5; /* White background for the form */
+  border: 1px solid #ddd; /* Light grey border */
+  transition: box-shadow 0.3s ease;
+}
+
+.publish-form:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.input-fieldpf {
+  margin-bottom: 16px;
+}
+
+.input-fieldpf label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input-fieldpf input,
+.input-fieldpf select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc; /* Light grey border */
+  background-color: #f9f9f9; /* Slightly grey background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-fieldpf input:focus,
+.input-fieldpf select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 4px rgba(0, 86, 179, 0.25);
+  outline: none;
+}
+
+.passenger-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passenger-counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter-btn {
+  background-color: #0056b3;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.counter-btn:hover {
+  background-color: #004494;
+  transform: scale(1.05);
+}
+
+.passenger-field input {
+  width: 30px; /* Smaller width for passenger count */
+  text-align: center;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9; /* Slightly grey background */
+}
+
+.savings {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #e0f7fa; /* Light cyan background */
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #b2ebf2; /* Light cyan border */
+}
+
+.savings .currency {
+  font-weight: 600;
+  color: #00796b; /* Darker cyan color */
+}
+
+.publish-ride-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #00796b; /* Darker cyan background */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.publish-ride-btn:hover {
+  background-color: #004d40; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .publish-form {
+    padding: 15px;
+  }
+
+  .input-fieldpf input,
+  .input-fieldpf select {
+    font-size: 14px;
+  }
+
+  .counter-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .passenger-field input {
+    width: 30px;
+    font-size: 12px;
+  }
+
+  .publish-ride-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

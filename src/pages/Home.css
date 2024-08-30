@@ -1,0 +1,43 @@
+.nav{
+   padding-top: 2vh;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top: 51vh;
+}
+
+
+.grpimage {
+    background: url(../assets/images/Ban_top_2017.jpg) no-repeat;
+    background-size: cover;
+
+    max-height:69vh ;
+    width: 100%;
+    border-radius: 10px;
+ 
+}
+
+.info{
+    margin-top: 10vh;
+}
+
+@media (max-width: 768px) {
+    .grpimage {
+        background-position: center center;
+        background: none;
+        background-color: rgb(113, 136, 218);
+    }
+}
+
+@media (max-width: 480px) {
+    .grpimage {
+        background: none;
+        background-color: rgb(81, 109, 211);
+    }
+    .search{
+        margin-top: 30vh;
+    }
+}

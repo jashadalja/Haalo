@@ -1,0 +1,73 @@
+/* Default Styles */
+.topSection {
+  background-color: #00a7e1;
+  color: white;
+  display: flex; 
+  justify-content: center;    
+  align-items: center;
+  flex-direction: row; /* Default to horizontal layout */
+  text-align: center;
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.image {
+  width: 100%;
+  max-width: 400px; 
+  margin-right: 20px; /* Margin to the right of the image */
+}
+
+.top-text {
+  max-width: 560px;
+}
+
+.top-text h2 {
+  font-size: 28px; 
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.top-text p {
+  font-size: 18px;
+  line-height: 1.6; 
+  margin-bottom: 30px;
+}
+
+.usbtn {
+  padding: 12px 25px;
+  background-color: white;
+  color: #00a7e1;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.usbtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .image {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+
+  .top-text {
+    max-width: 100%; /* Ensure text takes full width of the container */
+  }
+
+  .top-text h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .top-text p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
