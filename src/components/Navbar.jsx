@@ -3,6 +3,7 @@ import './Navbar.css';
 import { FaSearch, FaUser } from 'react-icons/fa';
 import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Navigate, useNavigate } from 'react-router-dom';
+import haloLogo from '../assets/images/halloLogo.png'
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-       <a href="/"> <img src="https://afgjobs.org/uploads/company-logo/17064519392000-COMPANY-LOGO.jpg" alt="Logo" /></a>
+       <a href="/"> <img src={haloLogo} alt="Logo" /></a>
       </div>
       <div className="navbar-items">
         <Button color="" className="navbar-search" onClick={sbtn}>

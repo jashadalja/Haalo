@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Publishform.css';
 
 const Publishform = () => {
@@ -8,7 +8,9 @@ const Publishform = () => {
   const [passengers, setPassengers] = useState(1);
   const [vehicleType, setVehicleType] = useState('');
   const [otherVehicle, setOtherVehicle] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [leavingFromSuggestions, setLeavingFromSuggestions] = useState([]);
+  const [goingToSuggestions, setGoingToSuggestions] = useState([]);
+  const navigate = useNavigate(); 
 
   const getMaxPassengers = () => {
     switch (vehicleType) {
@@ -25,7 +27,7 @@ const Publishform = () => {
 
   const handleVehicleTypeChange = (e) => {
     setVehicleType(e.target.value);
-    setPassengers(1); // Reset passengers to 1 when vehicle type changes
+    setPassengers(1); 
   };
 
   const incrementPassengers = () => {
@@ -48,19 +50,37 @@ const Publishform = () => {
       vehicleType: vehicleType === 'other' ? otherVehicle : vehicleType,
     };
 
-    console.log(formData); // For debugging purposes, log the data to the console
+    console.log(formData); 
 
-    // Store formData in local storage (or pass it to the next page)
     localStorage.setItem('rideDetails', JSON.stringify(formData));
 
-    // Redirect to Picklocation page
     navigate('/picklocation');
   };
+
+  const fetchSuggestions = async (value, setSuggestions) => {
+    if (value.length === 0) {
+      setSuggestions([]);
+      return;
+    }
+
+    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${value}&countrycodes=IN&limit=5`);
+    const data = await response.json();
+    
+    setSuggestions(data.map(place => place.display_name));
+  };
+
+  useEffect(() => {
+    fetchSuggestions(leavingFrom, setLeavingFromSuggestions);
+  }, [leavingFrom]);
+
+  useEffect(() => {
+    fetchSuggestions(goingTo, setGoingToSuggestions);
+  }, [goingTo]);
 
   return (
     <div className="publish-form">
       <div className="input-fieldpf">
-        <label htmlFor="leaving-from">Leaving from:</label>
+        <label htmlFor="leaving-from">Enter City Name Leaving from:</label>
         <input
           type="text"
           id="leaving-from"
@@ -68,9 +88,18 @@ const Publishform = () => {
           onChange={(e) => setLeavingFrom(e.target.value)}
           placeholder="Enter departure location"
         />
+        {leavingFromSuggestions.length > 0 && (
+          <ul className="suggestions-list">
+            {leavingFromSuggestions.map((suggestion, index) => (
+              <li key={index} onClick={() => setLeavingFrom(suggestion)}>
+                {suggestion}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="input-fieldpf">
-        <label htmlFor="going-to">Going to:</label>
+        <label htmlFor="going-to">Enter City Name</label>
         <input
           type="text"
           id="going-to"
@@ -78,6 +107,15 @@ const Publishform = () => {
           onChange={(e) => setGoingTo(e.target.value)}
           placeholder="Enter destination"
         />
+        {goingToSuggestions.length > 0 && (
+          <ul className="suggestions-list">
+            {goingToSuggestions.map((suggestion, index) => (
+              <li key={index} onClick={() => setGoingTo(suggestion)}>
+                {suggestion}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="input-fieldpf">
         <label htmlFor="vehicle-type">Vehicle type:</label>
