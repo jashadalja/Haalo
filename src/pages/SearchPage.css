@@ -3,12 +3,308 @@
     margin-left: 1%;
 }
 
-
-
 .snav{
-    margin-top: 1%;
+    margin-top: 2%;
+    display: flex;
+   
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.mainbox{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color:hsla(0, 0%, 93%, 1);
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+ 
 }
+
+.search-page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    width: 100%; /* Makes it responsive */
+    max-width: 60rem;
+    margin-top: 2rem;
+    
+  }
+  
+  .ride-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .ride-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .time-location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .departure-info,
+  .arrival-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .location {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .duration-info {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .duration-info::before,
+  .duration-info::after {
+    content: '';
+    display: inline-block;
+    width: 5vw;
+    height: 3px;
+    background-color: #1ee009;
+    margin:  30px;
+  }
+  
+  .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+  }
+
+  .distance-icons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .icon-container svg {
+    width: 17vw;
+    height: 20px;
+    fill: #999;
+  }
+  
+  .driver-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  
+  .driver-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .driver-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .driver-rating {
+    color: #ffa500;
+  }
+  
+  /* Additional styles for accessibility icons */
+  .accessibility-icons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .accessibility-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Car icon style */
+  .car-icon {
+    margin-right: 5px;
+  }
+  
+  .car-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #666;
+  }
+
+
+
+  /* Container for the entire filter section */
+section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    max-width: 400px;
+    margin-top: 2rem;
+   
+  }
+  
+  /* Heading style */
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the sort-by span */
+  h3 .fvsb4r0 {
+    margin-right: 8px;
+  }
+  
+  /* Unordered list styling */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 1rem;
+  }
+  
+  /* List item styling */
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 8px;
+    transition: background-color 0.2s ease;
+    max-width: 20vw;
+  }
+  
+  /* Style for labels within list items */
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Hover effect for labels */
+  label:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Radio button styling */
+  input[type="radio"] {
+    margin-right: 12px;
+  }
+  
+  /* Span styling for text next to radio buttons */
+  span.jqy9ue15t {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Image styling inside list items */
+  .filter-option-image {
+    width: 24px;
+    height: 24px;
+
+  }
+  
+  /* Styling for SVG icons */
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #555;
+    margin-right: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .mainbox {
+      flex-direction: column;
+    }
+
+
+  
+    section {
+      display: none; /* Hides the sort card on small screens */
+    }
+    
+    /* Add styles for the filter button and popup here if needed */
+  }
+
+
+  /* Hide the default radio button */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007BFF; /* Default border color */
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Styling for when the radio button is checked */
+input[type="radio"]:checked {
+  background-color: #007BFF; /* Background color when checked */
+  border-color: #007BFF; /* Border color when checked */
+}
+
+/* Create the dot inside the checked radio button */
+input[type="radio"]:checked::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+  
