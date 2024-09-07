@@ -1,0 +1,147 @@
+.nav {
+    padding-top: 2vh;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 51vh;
+}
+
+
+.grpimage {
+    background: url(../images/Ban_top_2017.jpg) no-repeat;
+    background-size: cover;
+
+    max-height: 69vh;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.info {
+    margin-top: 10vh;
+}
+
+.grpimage {
+    position: relative;
+    /* Allows for positioning the slogan inside the image */
+    background: url(../images/Ban_top_2017.jpg) no-repeat;
+    background-size: cover;
+    max-height: 69vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Gradient text with typewriter effect */
+.slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-size: 2.5rem; */
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #5060d8, #a295d4, #00c6ff, #0072ff);
+    background-clip: text;
+    display: none;
+    -webkit-background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid rgba(255, 255, 255, 0.75); */
+    /* Blinking cursor effect */
+    width: 0;
+    /* Ensure width is set to fully display text */
+    animation: typing 7s steps(30, end) infinite, blink 0.75s step-end infinite;
+    /* Infinite loop */
+    animation-fill-mode: forwards;
+    /* Keeps the final state of animation */
+}
+
+.slogan-start{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #5060d8, #a295d4, #00c6ff, #0072ff);
+    background-clip: text;
+    display: none;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* white-space: nowrap; */
+    /* overfl/ow: hidden; */
+}
+
+/* Typewriter keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+        /* Make the text fully visible */
+    }
+}
+
+/* Blinking cursor keyframes */
+@keyframes blink {
+
+    0%,
+    100% {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .grpimage {
+        background: none;
+        background-color: rgb(81, 109, 211);
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+        /* Adjust font size for mobile */
+        display: block;
+    }
+
+    .slogan-start{
+        display: block;
+        
+    }
+
+    .search {
+        margin-top: 30vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .grpimage {
+        background-position: center center;
+        background: none;
+        background-color: rgb(230, 223, 223);
+    }
+}
+
+@media (max-width: 480px) {
+    .grpimage {
+        background: none;
+        background-color: rgba(251, 243, 243, 0);
+    }
+
+    .search {
+        margin-top: 30vh;
+    }
+}

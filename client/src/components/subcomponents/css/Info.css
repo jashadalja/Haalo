@@ -1,0 +1,109 @@
+
+.info {
+    background-color: rgb(255, 255, 255);
+    margin-top: 3vh;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    min-width: 250px; /* Ensure a minimum width for small screens */
+}
+
+.feature-icon {
+    margin-bottom: 10px;
+}
+
+.icon-svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .features-list {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .info {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+        margin-top: 5vh; /* Adjust spacing on smaller devices */
+    }
+
+    .feature-title {
+        font-size: 16px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .info {
+        padding: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 10vh;
+    }
+
+    .features-list {
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .feature-item {
+        padding: 15px;
+        min-width: 100%; /* Make items full width on mobile */
+    }
+
+    .feature-title {
+        font-size: 14px;
+    }
+
+    .feature-description {
+        font-size: 13px;
+    }
+
+    .icon-svg {
+        width: 20px;
+        height: 20px;
+    }
+}
